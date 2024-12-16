@@ -6,7 +6,7 @@ const Banner = () => {
       <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-10 p-5 md:p-8">
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
-            src="src/assets/banner.jpg"
+            src="/banner.jpg"
             alt="Explore Asia"
             className="rounded-lg shadow-2xl w-full h-auto object-cover"
           />
