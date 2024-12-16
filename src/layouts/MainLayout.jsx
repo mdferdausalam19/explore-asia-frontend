@@ -8,12 +8,10 @@ const MainLayout = () => {
       <div className="container mx-auto">
         <Header></Header>
       </div>
-      <div className="container mx-auto min-h-[calc(100vh-68px-188px)]">
+      <div className="container mx-auto min-h-[calc(100vh-68px-220px)] px-3 md:px-0">
         <Outlet></Outlet>
       </div>
-      <div>
-        <Footer></Footer>
-      </div>
+      <Footer></Footer>
     </div>
   );
 };

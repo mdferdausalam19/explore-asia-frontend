@@ -27,6 +27,11 @@ const Header = () => {
               Sign Out
             </button>
           </li>
+          <li>
+            <NavLink className="btn btn-outline" to={"/add-tourist-spot"}>
+              Add Tourist Spot
+            </NavLink>
+          </li>
         </>
       )}
       {!user && (
