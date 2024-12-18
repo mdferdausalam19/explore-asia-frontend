@@ -6,6 +6,7 @@ import SignUp from "../pages/auth/SignUp";
 import NotFound from "../pages/notFound/NotFound";
 import PrivateRoute from "./PrivateRoute";
 import AddTouristSpot from "../pages/AddTouristSpot";
+import TouristSpotDetails from "../pages/TouristSpotDetails";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AddTouristSpot></AddTouristSpot>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/tourist-spots/:id",
+        element: (
+          <PrivateRoute>
+            <TouristSpotDetails></TouristSpotDetails>
           </PrivateRoute>
         ),
       },

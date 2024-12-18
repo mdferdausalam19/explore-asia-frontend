@@ -1,14 +1,11 @@
 import { Navigate } from "react-router";
 import useAuth from "../hooks/useAuth";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
   if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        <span className="loading loading-spinner loading-lg"></span>
-      </div>
-    );
+    return <LoadingSpinner></LoadingSpinner>;
   }
   if (!user) {
     return <Navigate to={"/sign-in"}></Navigate>;
