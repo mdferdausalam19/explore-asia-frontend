@@ -22,13 +22,12 @@ const TouristSpotCard = ({ touristSpot }) => {
             className="rounded-xl object-cover w-full h-full"
           />
         </figure>
-        <div className="card-body items-center">
+        <div className="card-body ">
           <div className="flex-grow">
             <h2 className="card-title">{touristsSpotName}</h2>
             <div className="mt-5 mb-5">
               <p>
-                <span className="font-semibold">Country:</span>{" "}
-                {countryName}
+                <span className="font-semibold">Country:</span> {countryName}
               </p>
               <p>
                 <span className="font-semibold">Location:</span>{" "}
@@ -41,7 +40,7 @@ const TouristSpotCard = ({ touristSpot }) => {
             </div>
           </div>
 
-          <div className="card-actions">
+          <div className="card-actions flex justify-center">
             <Link to={`/tourist-spots/${touristSpot._id}`} className="btn">
               View Details
             </Link>

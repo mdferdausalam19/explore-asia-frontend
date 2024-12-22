@@ -22,15 +22,20 @@ const Header = () => {
 
       {user && (
         <>
-          <li className="md:hidden">
-            <button onClick={handleSignOut} className="btn btn-outline">
-              Sign Out
-            </button>
+          <li>
+            <NavLink className="btn btn-outline" to={"/my-list"}>
+              My List
+            </NavLink>
           </li>
           <li>
             <NavLink className="btn btn-outline" to={"/add-tourist-spot"}>
               Add Tourist Spot
             </NavLink>
+          </li>
+          <li className="md:hidden">
+            <button onClick={handleSignOut} className="btn btn-outline">
+              Sign Out
+            </button>
           </li>
         </>
       )}
