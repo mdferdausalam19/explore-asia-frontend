@@ -72,7 +72,7 @@ const MyList = () => {
                 <th>{index + 1}</th>
                 <td>{spot?.touristsSpotName}</td>
                 <td>{spot?.location}</td>
-                <td>{spot?.averageCost}</td>
+                <td>{spot?.averageCost} per day</td>
                 <td className="space-y-2">
                   <Link
                     to={`/update-tourist-spot/${spot._id}`}

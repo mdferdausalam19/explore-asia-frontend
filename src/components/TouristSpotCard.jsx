@@ -30,12 +30,15 @@ const TouristSpotCard = ({ touristSpot }) => {
                 <span className="font-semibold">Country:</span> {countryName}
               </p>
               <p>
-                <span className="font-semibold">Location:</span>{" "}
-                {location ? location : "nai"}
+                <span className="font-semibold">Location:</span> {location}
               </p>
               <p>
                 <span className="font-semibold">Average Cost:</span>{" "}
-                {averageCost}
+                {averageCost} per day
+              </p>
+              <p>
+                <span className="font-semibold">Visitors Per Year:</span>{" "}
+                {totalVisitorsPerYear}
               </p>
             </div>
           </div>

@@ -23,6 +23,11 @@ const Header = () => {
       {user && (
         <>
           <li>
+            <NavLink className="btn btn-outline" to={"/all-tourist-spots"}>
+              All Tourist Spots
+            </NavLink>
+          </li>
+          <li>
             <NavLink className="btn btn-outline" to={"/my-list"}>
               My List
             </NavLink>
