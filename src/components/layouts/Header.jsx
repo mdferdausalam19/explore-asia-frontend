@@ -1,4 +1,4 @@
-import useAuth from "../../hooks/useAuth";
+import useAuth from "../../features/auth/useAuth";
 import { FaRegUserCircle } from "react-icons/fa";
 import toast from "react-hot-toast";
 import { Link, NavLink, useNavigate } from "react-router";

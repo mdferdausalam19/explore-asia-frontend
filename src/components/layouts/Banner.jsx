@@ -17,7 +17,7 @@ const Banner = () => {
             <h1 className="text-4xl md:text-5xl font-bold">
               <Typewriter
                 words={[
-                  "Explore the Wonders of Southeast Asia!",
+                  "Explore the Wonders of Asia!",
                   "Plan Your Adventure Today!",
                   "Discover Stunning Destinations!",
                 ]}
@@ -31,8 +31,8 @@ const Banner = () => {
             </h1>
             <p className="py-6 text-gray-700 leading-relaxed">
               Dive into the vibrant cultures, breathtaking landscapes, and rich
-              histories of Southeast Asia. From serene beaches to ancient
-              temples, there's an adventure for everyone!
+              histories of Asia. From serene beaches to ancient temples, there's
+              an adventure for everyone!
             </p>
           </div>
         </div>

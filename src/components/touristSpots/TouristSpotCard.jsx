@@ -6,10 +6,7 @@ const TouristSpotCard = ({ touristSpot }) => {
     touristsSpotName,
     countryName,
     location,
-    description,
     averageCost,
-    seasonality,
-    travelTime,
     totalVisitorsPerYear,
   } = touristSpot;
 

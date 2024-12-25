@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import useAuth from "../hooks/useAuth";
-import LoadingSpinner from "../components/LoadingSpinner";
-
+import useAuth from "../auth/useAuth";
+import LoadingSpinner from "../../components/ui/LoadingSpinner";
 const TouristSpotDetails = () => {
   const { loading } = useAuth();
   const [touristSpot, setTouristSpot] = useState([]);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/tourist-spots/${id}`)
+    fetch(`https://explore-asia-backend.vercel.app/tourist-spots/${id}`)
       .then((res) => res.json())
       .then((data) => setTouristSpot(data));
   }, []);

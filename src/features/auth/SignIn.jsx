@@ -1,7 +1,7 @@
-import useAuth from "../../hooks/useAuth";
+import useAuth from "../auth/useAuth";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
-import SocialSign from "../../components/SocialSign";
+import SocialSign from "../../components/ui/SocialSign";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router";
 import toast from "react-hot-toast";

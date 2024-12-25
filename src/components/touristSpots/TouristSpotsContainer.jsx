@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import TouristSpotCard from "./TouristSpotCard";
-import useAuth from "../hooks/useAuth";
-import LoadingSpinner from "./LoadingSpinner";
+import TouristSpotCard from "../touristSpots/TouristSpotCard";
+import useAuth from "../../features/auth/useAuth";
+import LoadingSpinner from "../ui/LoadingSpinner";
 
 const TouristSpotsContainer = () => {
   const { loading } = useAuth();
   const [touristSpots, setTouristSpots] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/tourist-spots")
+    fetch("https://explore-asia-backend.vercel.app/tourist-spots")
       .then((res) => res.json())
       .then((data) => setTouristSpots(data));
   }, []);
@@ -21,8 +21,8 @@ const TouristSpotsContainer = () => {
           Must-Visit Destinations
         </h2>
         <p>
-          Explore our curated list of breathtaking tourist spots across
-          Southeast Asia, perfect for every traveler.
+          Explore our curated list of breathtaking tourist spots across Asia,
+          perfect for every traveler.
         </p>
       </div>
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">

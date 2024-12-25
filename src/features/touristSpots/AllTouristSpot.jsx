@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import TouristSpotCard from "../components/TouristSpotCard";
+import TouristSpotCard from "../../components/touristSpots/TouristSpotCard";
 
 const AllTouristSpot = () => {
   const [touristSpots, setTouristSpots] = useState([]);
   const [sortOrder, setSortOrder] = useState("asc");
   useEffect(() => {
-    fetch(`http://localhost:5000/all-tourist-spots?sort=${sortOrder}`)
+    fetch(
+      `https://explore-asia-backend.vercel.app/all-tourist-spots?sort=${sortOrder}`
+    )
       .then((res) => res.json())
       .then((data) => setTouristSpots(data));
   }, [sortOrder]);

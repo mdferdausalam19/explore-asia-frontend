@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import useAuth from "../hooks/useAuth";
-import LoadingSpinner from "../components/LoadingSpinner";
+import useAuth from "../auth/useAuth";
+import LoadingSpinner from "../../components/ui/LoadingSpinner";
 import Swal from "sweetalert2";
 import { Link } from "react-router";
 
@@ -8,7 +8,9 @@ const MyList = () => {
   const { user, loading } = useAuth();
   const [touristSpot, setTouristSpots] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/user-tourist-spots?email=${user.email}`)
+    fetch(
+      `https://explore-asia-backend.vercel.app/user-tourist-spots?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setTouristSpots(data));
   }, []);
@@ -23,7 +25,7 @@ const MyList = () => {
       confirmButtonText: "Yes, Delete!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/tourist-spots/${id}`, {
+        fetch(`https://explore-asia-backend.vercel.app/tourist-spots/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import useAuth from "../hooks/useAuth";
+import useAuth from "../auth/useAuth";
 
 const AddTouristSpot = () => {
   const { user } = useAuth();
@@ -26,7 +26,7 @@ const AddTouristSpot = () => {
       userEmail: user?.email,
     };
     reset();
-    fetch("http://localhost:5000/tourist-spots", {
+    fetch("https://explore-asia-backend.vercel.app/tourist-spots", {
       method: "POST",
       headers: {
         "content-type": "application/json",

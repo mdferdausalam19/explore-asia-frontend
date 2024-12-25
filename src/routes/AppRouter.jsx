@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
-import SignIn from "../pages/auth/SignIn";
-import SignUp from "../pages/auth/SignUp";
-import NotFound from "../pages/notFound/NotFound";
+import SignIn from "../features/auth/SignIn"
+import SignUp from "../features/auth/SignUp";
+import NotFound from "../pages/NotFound";
 import PrivateRoute from "./PrivateRoute";
-import AddTouristSpot from "../pages/AddTouristSpot";
-import TouristSpotDetails from "../pages/TouristSpotDetails";
-import MyList from "../pages/MyList";
-import UpdateTouristSpot from "../pages/UpdateTouristSpot";
-import AllTouristSpot from "../pages/AllTouristSpot";
+import AddTouristSpot from "../features/touristSpots/AddTouristSpot";
+import TouristSpotDetails from "../features/touristSpots/TouristSpotDetails";
+import MyList from "../features/touristSpots/MyList";
+import UpdateTouristSpot from "../features/touristSpots/UpdateTouristSpot";
+import AllTouristSpot from "../features/touristSpots/AllTouristSpot";
 
 export const router = createBrowserRouter([
   {

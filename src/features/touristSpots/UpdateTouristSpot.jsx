@@ -13,7 +13,7 @@ const UpdateTouristSpot = () => {
     reset,
   } = useForm();
   useEffect(() => {
-    fetch(`http://localhost:5000/tourist-spots/${id}`)
+    fetch(`https://explore-asia-backend.vercel.app/tourist-spots/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setTouristSpot(data);
@@ -53,7 +53,7 @@ const UpdateTouristSpot = () => {
       confirmButtonText: "Yes, Update!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/tourist-spots/${id}`, {
+        fetch(`https://explore-asia-backend.vercel.app/tourist-spots/${id}`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",

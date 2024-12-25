@@ -1,5 +1,5 @@
-import Banner from "../components/Banner";
-import TouristSpotsContainer from "../components/TouristSpotsContainer";
+import Banner from "../components/layouts/Banner";
+import TouristSpotsContainer from "../components/touristSpots/TouristSpotsContainer"
 
 const Home = () => {
   return (

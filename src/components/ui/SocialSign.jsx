@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import useAuth from "../hooks/useAuth";
+import useAuth from "../../features/auth/useAuth";
 
 const SocialSign = () => {
   const { googleSignIn } = useAuth();
