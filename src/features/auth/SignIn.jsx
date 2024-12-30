@@ -1,10 +1,10 @@
 import useAuth from "../auth/useAuth";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
-import SocialSign from "../../components/ui/SocialSign";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router";
 import toast from "react-hot-toast";
+import SocialSignIn from "../../components/ui/SocialSignIn";
 
 const SignIn = () => {
   const [showPass, setShowPass] = useState(true);
@@ -95,7 +95,7 @@ const SignIn = () => {
         <div>
           <div className="divider">Continue With</div>
           <div className="text-center mb-8 mt-6">
-            <SocialSign></SocialSign>
+            <SocialSignIn></SocialSignIn>
           </div>
         </div>
       </div>

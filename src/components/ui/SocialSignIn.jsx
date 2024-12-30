@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router";
 import useAuth from "../../features/auth/useAuth";
 
-const SocialSign = () => {
+const SocialSignIn = () => {
   const { googleSignIn } = useAuth();
   const navigate = useNavigate();
-  const handleSocialLogin = (socialProvider) => {
+  const handleSocialSignIn = (socialProvider) => {
     socialProvider().then((result) => {
       if (result.user) {
         navigate("/");
@@ -14,7 +14,10 @@ const SocialSign = () => {
   return (
     <div>
       <div>
-        <button onClick={() => handleSocialLogin(googleSignIn)} className="btn">
+        <button
+          onClick={() => handleSocialSignIn(googleSignIn)}
+          className="btn"
+        >
           Google
         </button>
       </div>
@@ -22,4 +25,4 @@ const SocialSign = () => {
   );
 };
 
-export default SocialSign;
+export default SocialSignIn;
